@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const { context, GitHub } = require('@actions/github');
 const fs = require('fs').promises;
-const os = require('os');
+const path = require('path');
 
 console.log('Starting.');
 
@@ -17,7 +17,7 @@ async function run() {
         for(let i = 0; i < files.length; i++) {
             matrix.include.push({
                 name: files[i],
-                fileName: os.path.join(folderName, files[i])
+                fileName: path.join(folderName, files[i])
             });
         }
         
