@@ -512,6 +512,8 @@ console.log('Starting.');
 async function run() {
     try {
         const folderName = core.getInput('name');
+        const extension = '.tar.xz';
+
         const files = await fs.readdir(folderName);
         console.log(files);
         const matrix = {
@@ -520,9 +522,9 @@ async function run() {
         
         for(let i = 0; i < files.length; i++) {
             matrix.include.push({
-                name: path.parse(files[i]).name,
+                name: path.basename(files[i], extension),
                 fileName: path.join(folderName, files[i]),
-                extension:  path.parse(files[i]).ext
+                extension:  extension
             });
         }
         
