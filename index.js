@@ -17,7 +17,8 @@ async function run() {
         for(let i = 0; i < files.length; i++) {
             matrix.include.push({
                 name: path.parse(files[i]).name,
-                fileName: path.join(folderName, files[i])
+                fileName: path.join(folderName, files[i]),
+                extension:  path.parse(files[i]).ext
             });
         }
         
