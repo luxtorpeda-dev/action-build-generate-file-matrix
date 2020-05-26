@@ -5,9 +5,9 @@ runs:
     using: 'node12'
     main: 'dist/index.js'
 inputs:
-  token:
-    description: GitHub Personal Access Token
-    required: true
-outputs:
   name:
     description: Name of the folder to search in
+    required: true
+outputs:
+  matrix:
+    description: Matrix
