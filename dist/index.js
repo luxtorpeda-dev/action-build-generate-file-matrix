@@ -505,7 +505,7 @@ module.exports = require("os");
 const core = __webpack_require__(470);
 const { context, GitHub } = __webpack_require__(469);
 const fs = __webpack_require__(747).promises;
-const os = __webpack_require__(87);
+const path = __webpack_require__(622);
 
 console.log('Starting.');
 
@@ -521,7 +521,7 @@ async function run() {
         for(let i = 0; i < files.length; i++) {
             matrix.include.push({
                 name: files[i],
-                fileName: os.path.join(folderName, files[i])
+                fileName: path.join(folderName, files[i])
             });
         }
         
