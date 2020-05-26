@@ -1,0 +1,13 @@
+name: 'Generate File Matrix'
+description: 'Gets matrix based on files created'
+author: 'd10sfan'
+runs:
+    using: 'node12'
+    main: 'dist/index.js'
+inputs:
+  token:
+    description: GitHub Personal Access Token
+    required: true
+outputs:
+  name:
+    description: Name of the folder to search in
