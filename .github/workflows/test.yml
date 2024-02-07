@@ -14,4 +14,4 @@ jobs:
             - name: NPM Install
               run: npm ci
             - name: Build
-              run: node_modules/@zeit/ncc/dist/ncc/cli.js build index.js
+              run: node_modules/@vercel/ncc/dist/ncc/cli.js build index.js
