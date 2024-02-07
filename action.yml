@@ -2,7 +2,7 @@ name: 'Generate File Matrix'
 description: 'Gets matrix based on files created'
 author: 'd10sfan'
 runs:
-    using: 'node16'
+    using: 'node20'
     main: 'dist/index.js'
 inputs:
   name:
